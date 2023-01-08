@@ -1,0 +1,101 @@
+      <html>
+  <head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="#"><img src="IOU-Logo.png" alt="Logo"></a>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Support Us</a></li>
+        <li><a href="#">News & Events</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#"><img src="account-icon-clear.png" alt="Account icon"></a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Leave us a note!</h1>
+    </header>
+    <main>
+<form>
+  <div class="box">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+  </div>
+  <div class="box">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+  </div>
+  <div class="box">
+    <div>
+        <input type="radio" id="inquiry1" name="inquiry" value="Volunteer inquiry">
+        <label for="inquiry1">Volunteer inquiry (Please list interested event in message)</label><br>
+    </div>
+    <div>
+        <input type="radio" id="inquiry2" name="inquiry" value="Donation inquiry">
+        <label for="inquiry2">Donation inquiry</label><br>
+    </div>
+    <div>
+        <input type="radio" id="inquiry3" name="inquiry" value="Sponsorship inquiry">
+        <label for="inquiry3">Sponsorship inquiry</label><br>
+    </div>
+    <div>
+        <input type="radio" id="inquiry4" name="inquiry" value="Catering inquiry">
+        <label for="inquiry4">Catering inquiry</label><br>
+    </div>
+    <div>
+        <input type="radio" id="inquiry5" name="inquiry" value="Other">
+        <label for="inquiry5">Other</label><br>
+    </div>
+  </div>
+  <div class="box">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+  </div>
+</form>
+    <input type="submit" value="Send" class="button">
+
+    <script>
+        $(document).ready(function() {
+          $('input[type="submit"]').click(function() {
+            $(this).addClass('animated');
+            $(this).animate({
+              width: '150px'
+            }, 'fast', function() {
+              $(this).animate({
+                width: '100px'
+              }, 'fast');
+              $(this).val('Sent'); 
+              $(this).removeClass('animated'); 
+            });
+          });
+        });
+      </script>
+      
+    </main>
+    <footer>
+        <div>
+        <button>Contact Us</button>
+        <p>PO Box 4183 Cedar Park, Texas 78630</p>
+        <p><strong>info@theioufoundation.org</strong></p>
+        </div>
+        <div>
+        <h4>The IOU Foundation</h4>
+        <ul>
+        <li><img src="facebook.png" alt=”facebook”></li>
+        <li><img src="youtube.png" alt=”youtube”></li>
+        <li><img src="instagram.png" alt=”instagram”></li>
+        </ul>
+        <p>The IOU Foundation is a Registered Trademark of The IOU Foundation 501(c)(3). All Rights Reserved.</p>
+        </div>
+        <div>
+        <button>Donate</button>
+        <button>Sponsor</button>
+        <button>Volunteer</button>
+        </div>
+        </footer>
+  </body>
+</html>
